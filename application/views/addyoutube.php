@@ -166,7 +166,7 @@ if(empty($sess_id))
 <div id="container2">
     <h1>Add youtube link and discription</h1>
 
-    <form name="form_up" action="<?= base_url('addyoutube');?>" method="POST">
+    <form name="form_up" action="<?= base_url('youtube');?>" method="POST">
 <?php
 if (isset($res[0]))
 {

@@ -19,6 +19,13 @@ class user_model extends CI_Model {
         return $this->db->insert_id();
     }
 
+    public function add_youtube($quote)
+    {
+        $query = "INSERT INTO youtube (youtube_titel, youtube_link,youtube_discription) VALUES (?,?,?)";
+        $values = array($quote['text_youtube_titel'],$quote['text_youtube'],$quote['text_youtube_discription']);
+        $this->db->query($query, $values);
+        return $this->db->insert_id();
+    }
 
 
     public function updatepws($quote)

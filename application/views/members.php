@@ -147,7 +147,7 @@ if(empty($sess_id))
 
 <div id="container">
     <div class="hed_in1"><h1>Welcome <?= $this->session->userdata('member_name'); ?> </h1></div>
-    <div class="hed_in2"><h3> <a href="event">Add events</a> | <a href="youtube">Control panel rose stories</a> | <a href="comments">Control comments</a> | <a href="password">Change password</a> |  <a href="logout">Log Out</a>  </h3></div>
+    <div class="hed_in2"><h3> <a href="event">Add events</a> | <a href="youtube">Add youtube vidio link</a> | <a href="comments">Control comments</a> | <a href="password">Change password</a> |  <a href="logout">Log Out</a>  </h3></div>
 	<div id="body">
 
 

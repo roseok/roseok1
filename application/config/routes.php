@@ -47,7 +47,9 @@ $route['password'] = 'users/password';
 $route['changepassword'] = 'users/changepassword';
 $route['uploadfile'] = 'users/uploadfile';
 $route['event'] = 'users/addevent';
-$route['youtube'] = 'users/addeyoutube';
+$route['youtube'] = 'users/addyoutube';
+
+
 
 
 /* End of file routes.php */

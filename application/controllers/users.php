@@ -23,7 +23,44 @@ class Users extends CI_Controller {
 
     function addyoutube()//index page
     {
-        $this->load->view('addyoutube');
+        if ( !$this->input->post('upme1',true) ) {
+            $this->load->view('addyoutube');
+        }
+
+
+
+        if ( $this->input->post('upme1',true) ) {
+
+
+            $this->load->library('form_validation');
+
+
+            $this->form_validation->set_rules('text_youtube', 'text_youtube', 'required');
+            $this->form_validation->set_rules('text_youtube_titel', 'text_youtube_titel', 'required');
+            $this->form_validation->set_rules('text_youtube_discription', 'text_youtube_discription', 'required');
+
+            if ($this->form_validation->run() == FALSE) {
+                die('aa');
+                if ($this->form_validation->run() == FALSE) {
+
+                    $arr['res'] = array('Error in validation');
+                    $this->load->view('addeyoutube', $arr);
+
+                } else {
+
+
+            $this->load->model('user_model');
+                    $arr = $this->user_model->add_youtube($_POST);
+                    $this->load->view('members', $arr);
+                }
+
+
+            }
+        }
+
+
+
+
     }
 
     function logout()//index page
@@ -187,6 +224,10 @@ if ( $this->input->post('register',true) )
         }
         }
         // ************************************* Log me *********************************************
+
+
+
+
 
 
        public function uploadfile()
